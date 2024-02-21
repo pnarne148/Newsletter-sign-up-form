@@ -10,15 +10,238 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: 'Roboto';
+      src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'RobotoBold';
+      src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    .attribution { 
+      color: white;
+      text-align: center;
+      font-size: small;
+      position: absolute;
+      bottom: 1%;
+      width: 100%;
+     }
+    .attribution a { color: hsl(227, 45%, 73%); }
+
+    body{
+      margin: 0%;
+      padding: 0%;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #37394D;
+    }
+
+    .card{
+      width: 675px;
+      height: auto;
+      background-color: aliceblue;
+      padding: 20px;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      /* display: none; */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .information{
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 7%;
+      color: #252841;
+      height: auto;
+      width: 100%;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .information strong{
+      color: #252841;
+      font-size: 45px;
+      font-family: 'RobotoBold';
+    }
+    .information p{
+      color: #252841;
+      font-family: 'Roboto';
+      font-size: small;
+      margin-bottom: 20px;
+    }
+
+    .information img{
+      height: 1em;
+      width: auto;
+      margin-right: 10px;
+      object-fit: contain;
+    }
+
+    .point{
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .point p {
+      margin: 0;
+    }
+
+    .email{
+      position: relative;
+      margin-right: 30px;
+      border-color: gray;
+    }
+
+    .email strong{
+      font-family: 'RobotoBold';
+      font-size: x-small;
+      margin-bottom: 50px;
+    }
+
+    .email input{
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      border-radius: 7px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      margin-bottom: 17px;
+      font-family: 'Roboto';
+      box-sizing: border-box;
+    }
+
+    .email button{
+      width: 100%;
+      padding: 8px;
+      color: white;
+      border-radius: 7px;
+      background-color: #252841;
+      font-family: 'RobotoBold';
+      font-size: smaller;
+    }
+
+    .email p{
+      position: absolute;
+      top: 0; 
+      right: 0; 
+      color: #bd6258; 
+      font-family: 'RobotoBold';
+      font-size: x-small;
+      padding: 2px 8px; 
+      border-radius: 4px;
+      transform: translateY(-50%); 
+      display: none; 
+    }
+
+    .confirmation{
+      width: 280px;
+      height: auto;
+      background-color: rgb(248, 245, 242);
+      padding: 40px;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      display:none;
+    }
+
+    .confirmation img{
+      height: 3em;
+      width: auto;
+      object-fit: contain;
+      margin: 0%;
+      margin-left: 5%;
+    }
+
+    .thanks{
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 5%;
+      color: #252841;
+      height: auto;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .thanks strong{
+      color: #252841;
+      font-size: 45px;
+      font-family: 'RobotoBold';
+    }
+    .thanks p{
+      color: #252841;
+      font-family: 'Roboto';
+      padding-right: 10px;
+      font-size: 0.75em;
+      margin-bottom: 30px;
+    }
+
+    .thanks b {
+      display: inline; 
+    }
+    
+    .desktop-svg {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .mobile-svg {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .card{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+      }
+
+      .desktop-svg {
+        display: none;
+      }
+      .mobile-svg {
+        display: block;
+      }
+
+      .attribution { 
+        color: black;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <!-- Sign-up form start -->
 
-  Stay updated!
+  <!-- Stay updated!
 
   Join 60,000+ product managers receiving monthly updates on:
 
@@ -29,24 +252,112 @@
   Email address
   email@company.com
 
-  Subscribe to monthly newsletter
+  Subscribe to monthly newsletter -->
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
+  <!-- Thanks for subscribing!
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
-  Dismiss message
+  Dismiss message -->
 
   <!-- Success message end -->
+
+  <div class = card id = "subscribe">
+    <div class="desktop-svg">
+      <img src="assets\images\illustration-sign-up-desktop.svg" alt="Newsletter sign-up photo">
+    </div>
+    <div class="mobile-svg">
+      <img src="assets\images\illustration-sign-up-mobile.svg" alt="Newsletter sign-up photo">
+    </div>
+    <div class = information>
+      <strong> Stay updated! </strong>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <div>
+        <div class = "point">
+          <img src="assets\images\icon-list.svg">
+          <p>Product discovery and building what matters</p>
+
+        </div>
+        <div class = "point">
+          <img src="assets\images\icon-list.svg">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class = "point">
+          <img src="assets\images\icon-list.svg">
+          <p>And much more!</p>
+        </div>
+      </div><br>
+
+      <div class = "email">
+        <strong>Email address</strong>
+        <p class = "error-message">Valid email required</p>
+        <input type="email" id="email" name="email" placeholder="email@company.com">
+        <button type="button" onclick="validateEmail()">Subscribe to monthly newsletter</button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class = confirmation id = "confirmation">
+    <img src="assets\images\icon-success.svg">
+
+    <div class = thanks>
+      <strong> Thanks for subscribing! </strong>
+      <p>A confirmation email has been sent to <b id="mail">ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+
+      <div class = "email">
+        <button type="button" onclick="dismissMessage()">Dismiss message</button>
+      </div>
+
+
+    </div>
+  </div>
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Pranay Narne</a>.
   </div>
+
+
+
+
+  <script>
+
+    function dismissMessage() {
+      location.reload();
+    }
+
+    function validateEmail() {
+      // Get the email input and error message elements
+      var emailInput = document.getElementById('email');
+      var errorMessage = document.querySelector('.error-message');
+  
+      // Define the regular expression for a valid email
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      // Check if the email matches the pattern
+      if (emailPattern.test(emailInput.value)) {
+        // Email is valid, hide the error message if it was shown
+        errorMessage.style.display = 'none';
+        document.getElementById('subscribe').style.display = 'none';
+        document.getElementById('confirmation').style.display = 'block';
+        document.getElementById('mail').innerText = emailInput.value;
+      } else {
+        // Email is not valid, show the error message
+        errorMessage.style.display = 'block';
+        emailInput.style.borderColor = "#c17c74"
+        emailInput.style.color = "#c17c74"
+        emailInput.style.backgroundColor = "#EEDDDC"
+      }
+    }
+  </script>
 </body>
 </html>
